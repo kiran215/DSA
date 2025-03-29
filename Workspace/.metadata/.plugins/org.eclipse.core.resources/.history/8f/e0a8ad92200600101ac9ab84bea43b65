@@ -1,0 +1,50 @@
+package Array;
+
+public class RemoveEvenInteger {
+
+	public static void main(String[] args) {
+
+		int[] arr = { 3, 2, 4, 7, 10, 6, 5 };
+		int[] oddArray = removeEven(arr);
+		printArray(oddArray);
+	}
+
+	private static void printArray(int[] oddArray) {
+
+		int n = oddArray.length;
+
+		for (int i = 0; i < n; i++) {
+			System.out.print(oddArray[i] + " ");
+		}
+		System.out.println();
+
+	}
+
+	public static int[] removeEven(int[] arr) {
+
+		int oddCount = 0;
+		// First identify how many odd elements are present in array
+		// To create new array with odd elements
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 != 0) {
+				oddCount++;
+			}
+		}
+		// new array to store odd elements
+		int oddArr[] = new int[oddCount];
+
+		int index = 0;// initializing odd array index to store odd element from original array
+
+		// iterate original array and then store odd element in oddArr
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % 2 != 0) {
+				oddArr[index] = arr[i]; //storing odd element from original array to oddArr
+				index++;//incrementing index to store next odd element
+			}
+		}
+
+		return oddArr;
+
+	}
+
+}

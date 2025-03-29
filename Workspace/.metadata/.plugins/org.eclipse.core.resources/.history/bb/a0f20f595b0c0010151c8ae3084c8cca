@@ -1,0 +1,12 @@
+package Array;
+
+public class ResizeArray {
+
+	public static void main(String[] args) {
+		
+		int a[] = {1,2,3,4};
+		
+		int resizedArray[] = resize(a,a.length*2);
+	}
+
+}

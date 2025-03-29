@@ -1,0 +1,21 @@
+package Array;
+
+public class ReverseArray {
+
+	public static void main(String[] args) {
+		int[] arr = { 3, 2, 4, 7, 10, 6, 5 };
+		int[] reversedArray = removeEven(arr);
+		printArray(oddArray);
+	}
+	private static void printArray(int[] oddArray) {
+
+		int n = oddArray.length;
+
+		for (int i = 0; i < n; i++) {
+			System.out.print(oddArray[i] + " ");
+		}
+		System.out.println();
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package Array;
+
+public class PalindormeCheck {
+
+	public static void main(String[] args) {
+
+		String s = "madam";
+		
+		System.out.println("Is madam palindrome "+checkPalindrome(s));
+
+	}
+
+	private static boolean checkPalindrome(String s) {
+		
+		char[] charArray = s.toCharArray();
+		int start = 0;
+		int end = s.length()-1;
+		while(start<end) {
+			if(charArray[start]!=charArray[end]) {
+				return false;
+			}
+			start++;
+			end--
+		}
+		return null;
+	}
+
+}

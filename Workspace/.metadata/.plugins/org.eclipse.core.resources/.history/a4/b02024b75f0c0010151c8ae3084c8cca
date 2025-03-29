@@ -1,0 +1,27 @@
+package Array;
+
+public class FindingMissingNumberInArray {
+
+	public static void main(String[] args) throws Exception {
+
+		int[] a = { 1, 2, 3, 4, 5, 7, 9 };
+
+		System.out.println("Missing Element - " + findMissingElement(a, a.length + 1));
+
+	}
+
+	private static int findMissingElement(int[] a, int n) throws Exception {
+
+		int sum = (n * (n + 1)) / 2;
+
+		for (int num : a) {
+			sum = sum - num;
+			System.out.println(sum);
+		}
+//		if (sum != n - 1) {
+//			throw new Exception("No missing Element");
+//		}
+		return sum;
+	}
+
+}

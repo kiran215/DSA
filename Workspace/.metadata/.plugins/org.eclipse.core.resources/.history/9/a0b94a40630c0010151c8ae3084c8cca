@@ -1,0 +1,11 @@
+package Array;
+
+public class PalindormeCheck {
+
+	public static void main(String[] args) {
+
+		String = "madam";
+
+	}
+
+}

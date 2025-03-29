@@ -1,0 +1,5 @@
+1. Finding multiple missing number in array
+-Find highest element and consider it as n
+- Add all the array element in hashset
+-loop till i=1 , i<=n and check if i is contains in hashset or not.
+-if not contain then its missing element

@@ -1,0 +1,44 @@
+package Array;
+
+public class MoveZeroesToEndOfArray {
+
+	public static void main(String[] args) {
+		int[] arr = { 0, 3, 2, 0, 4, 9, 1, 10,0 , 6, 5, 10 };
+		printArray(arr);
+		int newArr[] = moveZeroes(arr);
+		printArray(newArr);
+
+	}
+
+	private static int[] moveZeroes(int[] arr) {
+		// two pointer alogrithm will be used to traverse array and move zeroes to end
+		// of
+		// an array
+
+		int j = 0;// initialize j-0 for two pointer
+
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i]!=0 && arr[j]==0) {
+				int temp = arr[i];
+				arr[i]=arr[j];
+				arr[j]=temp;
+			}
+			if(arr[j]!=0) {
+				j++;
+			}
+		}
+		return arr;
+	}
+
+	private static void printArray(int[] newArr) {
+
+		int n = newArr.length;
+
+		for (int i = 0; i < n; i++) {
+			System.out.print(newArr[i] + " ");
+		}
+		System.out.println();
+
+	}
+
+}

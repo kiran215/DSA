@@ -1,0 +1,30 @@
+package Array;
+
+public class FindSecondMax {
+
+	public static void main(String[] args) {
+		int[] arr = { 3, 2, 4, 7, 1, 10, 6, 5 };
+
+		int secondMaxValue = findSecondMax(arr);
+
+	}
+
+	private static int findSecondMax(int[] arr) {
+
+		// assign max and second max to min value of inetger
+		int max = Integer.MIN_VALUE;
+		int secondMax = Integer.MIN_VALUE;
+
+		for (int i = 0; i < arr.length; i++) {
+			// if array element is grater than initialized max then new max will be array
+			// element and second max will be old max as written inside if condition
+			if (arr[i] > max) {
+
+				secondMax = max;
+				max = arr[i];
+			}else if(arr[i])
+		}
+		return 0;
+	}
+
+}

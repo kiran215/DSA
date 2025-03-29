@@ -1,0 +1,41 @@
+package Array;
+
+public class OneDArray {
+
+	public static void main(String[] args) {
+		
+		int[] arr = {3,2,4,7,10,6,5};
+		OneDArray oneDArr = new OneDArray();
+		int[] arrayAfterRemovingEvemElements = oneDArr.removeEven(arr);
+		oneDArr.printArray(arrayAfterRemovingEvemElements);
+	}
+	
+	public int[] removeEven(int[] arr) {
+		
+		int oddIndex = 0;
+		//First identify how many odd elements are present in array
+		//To create new array with odd elements
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]%2!=0) {
+				oddIndex++;
+			}
+		}
+		//new array to store odd elements
+		int oddArr[] = new int[oddIndex];
+		
+		int index = 0;//initializing odd array index to store odd element from original array
+		
+		//iterate original array and then store in oddArr
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]%2!=0) {
+				oddArr[index]=arr[i];
+				index++;
+			}
+		}
+		
+		return oddArr;
+		
+		
+	}
+
+}

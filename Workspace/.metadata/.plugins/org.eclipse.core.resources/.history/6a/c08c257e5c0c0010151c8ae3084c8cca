@@ -1,0 +1,32 @@
+package Array;
+
+import java.util.Arrays;
+
+public class ResizeArray {
+
+	public static void main(String[] args) {
+
+		int a[] = { 1, 2, 3, 4 };
+		System.out.println("size of original array -" + a.length);
+		Arrays.stream(a).forEach(System.out::print);
+
+		a = resize(a, a.length + (a.length / 2));
+
+		System.out.println("size of resized array -" + a.length);
+
+		Arrays.stream(a).forEach(System.out::print);
+
+	}
+
+	private static int[] resize(int[] a, int capacity) {
+
+		int temp[] = new int[capacity];
+
+		for (int i = 0; i < a.length; i++) {
+			temp[i] = a[i];
+		}
+
+		return temp;
+	}
+
+}

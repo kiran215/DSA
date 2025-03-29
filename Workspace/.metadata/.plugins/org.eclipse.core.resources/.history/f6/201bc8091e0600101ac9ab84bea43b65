@@ -1,0 +1,14 @@
+package Array;
+
+public class OneDArray {
+
+	public static void main(String[] args) {
+		
+		//Array initialization
+		int a[] = new int[5];
+		
+		System.out.println(a[1]);
+
+	}
+
+}

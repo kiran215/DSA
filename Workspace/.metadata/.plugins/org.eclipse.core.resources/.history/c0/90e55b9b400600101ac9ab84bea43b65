@@ -1,0 +1,13 @@
+package Array;
+
+public class MoveZeroesToEndOfArray {
+
+	public static void main(String[] args) {
+		int[] arr = { 0,3, 2,0, 4, 9, 1, 10, 6, 5, 10 };
+
+		int newArr[] = moveZeroes(arr);
+		System.out.println("secondMaxValue - " + secondMaxValue);
+
+	}
+
+}

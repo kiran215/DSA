@@ -1,0 +1,10 @@
+package Array;
+
+public class FindingMissingNumberInArray {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
