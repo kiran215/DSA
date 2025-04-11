@@ -55,20 +55,32 @@ public class DeleteNodeInSingleLinkedList {
 		isll.deleteNodeAtTheEnd();
 		isll.printLL();
 
-		isll.deleteNodeAtTheEnd();
+		isll.deleteNodeAtGivenPosition(3);
 		isll.printLL();
 
-		isll.deleteNodeAtTheEnd();
-		isll.printLL();
+	}
 
-		isll.deleteNodeAtTheEnd();
-		isll.printLL();
-		isll.deleteNodeAtTheEnd();
-		isll.printLL();
-		isll.deleteNodeAtTheEnd();
-		isll.printLL();
-
-
+	private void deleteNodeAtGivenPosition(int n) {
+		
+		if(head==null)
+			return;
+		ListNode current = head;
+		ListNode previous = null;
+		
+		if(n==1) {
+			head = current.next;
+			return;
+		}
+		
+		int count =1;
+		while(count<n) {
+			previous=current;
+			current=current.next;
+			count++;
+		}
+		
+		previous.next=current.next;
+		
 	}
 
 	private void deleteNodeAtTheEnd() {
@@ -80,11 +92,13 @@ public class DeleteNodeInSingleLinkedList {
 		} else {
 
 			ListNode current = head;
+			ListNode previous = null;
 
-			while (current.next.next != null) {
+			while (current.next != null) {
+				previous = current;
 				current = current.next;
 			}
-			current.next = null;
+			previous.next = null;
 		}
 	}
 
